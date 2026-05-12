@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFood - Trang chủ</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css"> <!-- File CSS tự viết của bạn -->
+</head>
+
+<!-- data-spy dùng để highlight menu khi cuộn trang tới phần nội dung tương ứng[cite: 1] -->
+<body data-spy="scroll" data-target="#main-navbar" data-offset="70">
+
+<!-- 1. MENU -->
+    <nav id="main-navbar" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                        <img src="./image/Screenshot 2026-05-05 181629.png" alt="Logo FastFood" class="brand-logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="selected"><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#services">Thực đơn</a></li>
+                    <li><a href="#portfolio">Khuyến mãi</a></li>
+                    <li><a href="#pricing">Combo</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- BANNER PHỤ CHO TRANG SẢN PHẨM -->
+    <header class="jumbotron text-center product-banner">
+        <div class="container">
+            <h1>Chi Tiết Món Ăn</h1>
+        </div>
+    </header>
+
+    <!-- CHI TIẾT SẢN PHẨM -->
+    <section class="container product-detail">
+        <!-- Nút quay lại trang chủ -->
+        <a href="index.html" class="btn btn-default btn-back">
+            <span class="glyphicon glyphicon-arrow-left"></span> Quay lại Thực đơn
+        </a>
+
+        <div class="row">
+            <!-- Hình ảnh sản phẩm -->
+            <div class="col-md-6">
+                <img src="./image/garan.avif" class="img-responsive img-thumbnail" alt="Gà Rán Giòn Cay">
+            </div>
+            
+            <div class="col-md-6">
+                <h2>Gà Rán Giòn Cay (2 Miếng)</h2>
+                <h3 class="product-price">75.000đ</h3>
+                <p class="product-desc">
+                    Lớp vỏ giòn rụm rắc thêm chút bột ớt cay nồng, tẩm ướp theo công thức 12 loại gia vị bí truyền. Thịt gà bên trong vẫn giữ nguyên độ ẩm, mềm mọng nước và không hề bị khô. Cắn một miếng là cảm nhận ngay sự bùng nổ hương vị.
+                </p>
+                
+                <h4>Thành phần chính:</h4>
+                <ul>
+                    <li>1 Má đùi gà & 1 Cánh gà tươi</li>
+                    <li>Bột chiên giòn đặc chế FastFood</li>
+                    <li>Gia vị ớt ướp cay nồng</li>
+                    <li>Sốt chấm tương ớt chua ngọt (kèm theo)</li>
+                </ul>
+
+                <!-- Button chọn mua mở form modal -->
+                    <a href="#" class="btn btn-danger btn-lg btn-add-cart" 
+                    data-name="Gà Rán Giòn Cay" 
+                    data-price="45000" 
+                    data-img="./image/garan.avif">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> Thêm vào giỏ hàng
+                    </a>
+            </div>
+        </div>
+    </section>
+
+
+
+<footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4>Về FastFood</h4>
+                    <p>Hệ thống chuỗi thức ăn nhanh hàng đầu, cam kết mang đến những bữa ăn nóng hổi, an toàn và đậm đà hương vị.</p>
+                    <ul class="list-unstyled footer-contact">
+                        <li><span class="glyphicon glyphicon-earphone"></span> Hotline: <strong class="hotline-text">1900 1234</strong></li>
+                        <li><span class="glyphicon glyphicon-envelope"></span> Email: cskh@fastfood.vn</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4>Hỗ Trợ Khách Hàng</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">Chính sách giao hàng tận nơi</a></li>
+                        <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4>Chi Nhánh</h4>
+                    <ul class="list-unstyled footer-branch">
+                        <li>
+                            <strong>TP. Hồ Chí Minh:</strong><br> 
+                            472 Đông Hồ, Quận 8
+                        </li>
+                        <li>
+                            <strong>Hà Nội:</strong><br> 
+                            16 Lý Thái Tổ, Quận Cầu Giấy
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4>Kết Nối & Thanh Toán</h4>
+                    
+                    <div class="footer-social">
+                        <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span> Facebook</a>
+                        <a href="#"><span class="glyphicon glyphicon-share"></span> Zalo</a>
+                    </div>
+
+                    <p class="payment-title">Chấp nhận thanh toán:</p>
+                    <div class="footer-payment-box">
+                        <span class="pay-visa">VISA</span>
+                        <span class="pay-master">MasterCard</span>
+                        <span class="pay-momo">MoMo</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row">
+                <div class="col-md-12 text-center footer-copyright">
+                    <p>Bản quyền &copy; 2026 thuộc về Công ty TNHH FastFood Vietnam.</p>
+                    <p>Giấy CNĐKDN: 0312345678 - Ngày cấp: 12/05/2026, cơ quan cấp: Sở Kế hoạch và Đầu tư TP.HCM.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="./java script/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./java script/main.js"></script> 
+</body>
+</html>
