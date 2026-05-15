@@ -1,6 +1,5 @@
 $(document).ready(function(){
     // 1. HIỆU ỨNG CUỘN MƯỢT (SMOOTH SCROLL)
-
 $(".navbar a, footer a[href='#main-navbar']").on('click', function(event) {
         if (this.hash !== "") {
             var target = $(this.hash);
@@ -104,7 +103,7 @@ $(".navbar a, footer a[href='#main-navbar']").on('click', function(event) {
         window.location.href = 'cart.html';
     });
 
-    // B. HIỂN THỊ GIỎ HÀNG (Khi mở trang cart.html)
+    // B. HIỂN THỊ GIỎ HÀNG 
     function loadCart() {
         // Nếu không có cái hộp này (tức là đang ở trang chủ), thì không làm gì cả
         if ($('#cart-items-container').length === 0) return; 

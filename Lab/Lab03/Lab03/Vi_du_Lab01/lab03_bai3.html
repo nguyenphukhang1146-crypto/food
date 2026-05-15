@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore - Lab 03 Bài 3</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <style>
+        .form-container {
+            background-color: #f5f5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #333;
+        }
+        .form-table {
+            width: 100%;
+        }
+        .form-table td {
+            padding: 6px 0;
+        }
+        .form-table input[type="text"], 
+        .form-table select,
+        .form-table textarea {
+            padding: 4px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="banner_logo">
+                <a href="#"> <img src="images/bookstoreBanner.jpg" style="border-radius: 10px;" width="1000" height="300" alt="Banner"></a>
+            </div>
+        </div>
+
+        <div id="menu">
+            <div id="menu_left_corner"></div>
+            <div id="menu_content">
+                <ul id="hmenu">
+                    <li><a href="#"><img src="images/layout/home.png" /> TRANG CHỦ</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/services.png" /> DỊCH VỤ</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/favs.png" /> TIN KHUYẾN MÃI</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/car.png" /> GIAO HÀNG</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+            <div id="menu_right_corner"></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="path"></div>
+        
+        <div id="main">
+
+            <div id="left">
+                <div class="title">Loại sản phẩm</div>
+                <ul class="categories">
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Văn Học</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Kinh Tế</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Tâm Lý</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiếu Nhi</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Giáo Khoa</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ngoại Ngữ</a></li>
+                </ul>
+
+            </div>
+
+            <div id="content">
+                <div class="form-container">
+                    <form action="../xl_lab03_bai3.php" method="POST" enctype="multipart/form-data">
+                        <table class="form-table" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td colspan="2" align="center" style="font-weight: bold; font-size: 14px; padding-bottom: 15px; text-transform: uppercase;">Thêm Sản Phẩm Mới</td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="30%">Mã sản phẩm</td>
+                                <td><input type="text" name="nmProID" value="" size="25"></td>
+                            </tr>
+                            <tr>
+                                <td>Tên sản phẩm</td>
+                                <td><input type="text" name="nmProName" value="" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td>Hình ảnh</td>
+                                <td><input type="file" name="nmProImg"></td>
+                            </tr>
+                            <tr>
+                                <td>Hãng sản xuất</td>
+                                <td>
+                                    <select name="nmMan">
+                                        <option value="1">Thiên Long</option>
+                                        <option value="2">Deli</option>
+                                        <option value="3">KLONG</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kích thước</td>
+                                <td>
+                                    W: <input type="text" name="nmWidth" value="" size="5"> &nbsp;
+                                    H: <input type="text" name="nmHeight" value="" size="5"> mm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Số trang</td>
+                                <td><input type="text" name="nmCount" value="" size="15"> trang</td>
+                            </tr>
+                            <tr>
+                                <td>Tác giả</td>
+                                <td><input type="text" name="nmTacGia" value="" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td>Giá</td>
+                                <td>
+                                    <input type="text" name="nmPrice" value="" size="15"> &nbsp;&nbsp;&nbsp;
+                                    Màu: <input type="color" name="nmColor" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xuất xứ</td>
+                                <td><input type="text" name="nmLive" value="" size="30"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td valign="top" style="padding-top: 8px;">Thể Loại</td>
+                                <td style="padding-top: 8px;">
+                                    <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                                        <tr>
+                                            <td><input type="checkbox" name="nmFunctions[]" value="Van_hoc"> Văn học</td>
+                                            <td><input type="checkbox" name="nmFunctions[]" value="Thieu_nhi"> Thiếu nhi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="nmFunctions[]" value="Kinh_te"> Kinh tế</td>
+                                            <td><input type="checkbox" name="nmFunctions[]" value="Giao_khoa" > Giáo khoa</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="nmFunctions[]" value="Tam_ly"> Tâm lý</td>
+                                            <td><input type="checkbox" name="nmFunctions[]" value="Ngoai_ngu" > Ngoại ngữ</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td valign="top" style="padding-top: 10px;">Mô tả chi tiết</td>
+                                <td style="padding-top: 10px;">
+                                    <textarea name="nmProDet" rows="6" cols="40"></textarea>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2" align="center" style="padding-top: 20px;">
+                                    <input type="submit" value="Thêm">
+                                    <input type="reset" value="Xóa">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div id="right">
+                <div class="title">Hãng sản xuất</div>
+                <ul class="categories">
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;CHONMUA 365</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Deli</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiên Long</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;KLONG</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Lazy Box</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;M&G</a></li>
+                </ul>
+
+            </div>
+
+        </div> <div id="footer" style="clear:both; text-align: center; color: #666; font-size: 12px; font-style: italic; padding: 15px 0;">
+            Copyright&copy; Cửa hàng sách Q8<br>
+            Địa chỉ: 180 Cao Lỗ Phường 4 Quận 8 Tp.HCM<br>
+            Điện thoại: 0777037412
+        </div>
+
+    </div>
+</body>
+</html>

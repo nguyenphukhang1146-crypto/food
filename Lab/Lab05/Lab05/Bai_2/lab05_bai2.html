@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Tích Bố Cục - Lab 05 Bài 2</title>
+    <style>
+        /* CSS Reset & Cơ bản */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f8f9fa; }
+        .wireframe-container { max-width: 1140px; margin: 0 auto; background: #fff; padding: 15px; border: 1px solid #dee2e6; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        h1 { text-align: center; color: #333; margin-bottom: 30px; text-transform: uppercase; font-size: 24px; }
+        
+        /* Flexbox cho Grid */
+        .w-row { display: flex; flex-wrap: wrap; margin: -5px; margin-bottom: 15px; }
+        .w-col { padding: 5px; box-sizing: border-box; }
+        
+        /* Box đại diện cho các thành phần */
+        .box { 
+            border: 2px dashed #007bff; 
+            background: #e9ecef; 
+            text-align: center; 
+            padding: 20px; 
+            font-weight: bold; 
+            color: #495057; 
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        /* Định nghĩa độ rộng các cột mô phỏng Bootstrap 12-grid */
+        .w-12 { width: 100%; }
+        .w-9 { width: 75%; }
+        .w-8 { width: 66.66%; }
+        .w-6 { width: 50%; }
+        .w-4 { width: 33.33%; }
+        .w-3 { width: 25%; }
+
+        /* Custom màu cho dễ nhìn */
+        .header-bg { border-color: #28a745; background: #d4edda; color: #155724; }
+        .hero-bg { border-color: #17a2b8; background: #d1ecf1; color: #0c5460; }
+        .content-bg { border-color: #fd7e14; background: #ffe8d6; color: #d35400; }
+        .footer-bg { border-color: #343a40; background: #e2e3e5; color: #383d41; }
+    </style>
+</head>
+<body>
+
+    <div class="wireframe-container">
+        <h1>Bản đồ Bố cục (Wireframe) - Trang BookStore</h1>
+
+        <div class="w-row">
+            <div class="w-col w-6"><div class="box header-bg" style="padding: 10px;">Top Bar Trái (Email)</div></div>
+            <div class="w-col w-6"><div class="box header-bg" style="padding: 10px;">Top Bar Phải (Login, Social)</div></div>
+        </div>
+        <div class="w-row">
+            <div class="w-col w-3"><div class="box header-bg">Logo</div></div>
+            <div class="w-col w-6"><div class="box header-bg">MENU NGANG<br><small>(Trang chủ, Cửa hàng, Blog...)</small></div></div>
+            <div class="w-col w-3"><div class="box header-bg">Giỏ Hàng & Giá Tiền</div></div>
+        </div>
+
+        <div class="w-row">
+            <div class="w-col w-3">
+                <div class="box hero-bg" style="min-height: 350px;">MENU DỌC<br><small>(Danh mục sản phẩm)</small></div>
+            </div>
+            <div class="w-col w-9">
+                <div class="w-row" style="margin: 0;">
+                    <div class="w-col w-12"><div class="box hero-bg" style="padding: 15px; margin-bottom: 10px;">Thanh Tìm Kiếm & Hotline</div></div>
+                    <div class="w-col w-12"><div class="box hero-bg" style="min-height: 255px;">BANNER CHÍNH<br><small>(Khuyến mãi! Thế giới sách)</small></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-row"><div class="w-col w-12"><div class="box content-bg" style="padding: 10px;">Tiêu đề: SẢN PHẨM NỔI BẬT</div></div></div>
+        <div class="w-row">
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 1</div></div>
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 2</div></div>
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 3</div></div>
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 4</div></div>
+        </div>
+        <div class="w-row">
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 5</div></div>
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 6</div></div>
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 7</div></div>
+            <div class="w-col w-3"><div class="box content-bg" style="height: 150px;">Sản phẩm 8</div></div>
+        </div>
+
+        <div class="w-row">
+            <div class="w-col w-6"><div class="box content-bg" style="height: 120px;">BANNER PHỤ 1</div></div>
+            <div class="w-col w-6"><div class="box content-bg" style="height: 120px;">BANNER PHỤ 2</div></div>
+        </div>
+
+        <div class="w-row"><div class="w-col w-12"><div class="box content-bg" style="padding: 10px;">Tiêu đề: BÀI VIẾT</div></div></div>
+        <div class="w-row">
+            <div class="w-col w-4"><div class="box content-bg" style="height: 180px;">Bài viết Blog 1</div></div>
+            <div class="w-col w-4"><div class="box content-bg" style="height: 180px;">Bài viết Blog 2</div></div>
+            <div class="w-col w-4"><div class="box content-bg" style="height: 180px;">Bài viết Blog 3</div></div>
+        </div>
+
+        <div class="w-row">
+            <div class="w-col w-3"><div class="box footer-bg" style="height: 150px;">Logo &<br>Địa chỉ liên hệ</div></div>
+            <div class="w-col w-5"><div class="box footer-bg" style="height: 150px;">Menu liên kết<br><small>(Về chúng tôi, Hỗ trợ...)</small></div></div>
+            <div class="w-col w-4"><div class="box footer-bg" style="height: 150px;">Đăng ký nhận tin &<br>Mạng xã hội</div></div>
+        </div>
+        <div class="w-row">
+            <div class="w-col w-12"><div class="box footer-bg" style="padding: 10px;">Copyright & Payment Icons</div></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

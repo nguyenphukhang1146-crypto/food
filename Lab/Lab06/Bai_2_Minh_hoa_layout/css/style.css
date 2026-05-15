@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Thêm font-size mặc định 16px cho toàn trang */
+body {
+    font-size: 16px;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header-flex-2 {
+    background: tomato;
+}
+
+.footer-flex-2 {
+    background: lightgreen;
+    order: 4;
+}
+
+.main {
+    text-align: left;
+    background: deepskyblue;
+    height: auto; /* Đổi thành auto để chứa vừa ảnh và text */
+    flex: 3 0px;
+    order: 2;
+}
+
+/* =========================================================
+   THIẾT LẬP RESPONSIVE CHO HÌNH ẢNH
+   ========================================================= */
+.img-responsive {
+    width: 100%;    /* Ép ảnh luôn bằng 100% chiều rộng của cột chứa nó */
+    height: auto;   /* Chiều cao tự co giãn theo tỷ lệ chuẩn của ảnh */
+    display: block;
+    margin-top: 15px; /* Tạo khoảng cách với đoạn văn phía trên */
+}
+
+.aside {
+    flex: 1 0 0;
+}
+
+.aside-1 {
+    background: gold;
+    min-height: 400px;
+    order: 1;
+}
+
+.aside-2 {
+    background: hotpink;
+    min-height: 400px;
+    order: 3;
+}
+
+/* Responsive 2 cột (Dưới 1200px) */
+@media screen and (max-width: 1200px) {
+    .main {
+        flex: 1 100%; 
+        order: 1;     
+    }
+    .aside-1 {
+        flex: 1 50%;  
+        order: 2;     
+    }
+    .aside-2 {
+        flex: 1 50%;  
+        order: 3;     
+    }
+}
+
+/* =========================================================
+   Responsive 1 cột (Dưới 600px) - TĂNG FONT CHỮ LÊN 20PX
+   ========================================================= */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 20px; /* Chuyển thành 1 cột thì chữ to lên 20px */
+    }
+    
+    .aside-1, .aside-2 {
+        flex: 1 100%; 
+    }
+}

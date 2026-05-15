@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore - Lab 03 Bài 2</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <style>
+        /* CSS trang trí cho Form đăng ký */
+        .form-container {
+            background-color: #f5f5f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #333;
+        }
+        .form-table {
+            width: 100%;
+        }
+        .form-table td {
+            padding: 6px 0;
+        }
+        .form-table input[type="text"], 
+        .form-table input[type="password"], 
+        .form-table input[type="email"], 
+        .form-table input[type="date"], 
+        .form-table input[type="tel"], 
+        .form-table select {
+            padding: 4px;
+            border: 1px solid #ccc;
+        }
+        .section-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="banner_logo">
+                <a href="#"> <img src="images/bookstoreBanner.jpg" style="border-radius: 10px;" width="1000" height="300" alt="Banner"></a>
+            </div>
+        </div>
+
+        <div id="menu">
+            <div id="menu_left_corner"></div>
+            <div id="menu_content">
+                <ul id="hmenu">
+                    <li><a href="#"><img src="images/layout/home.png" /> TRANG CHỦ</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/services.png" /> DỊCH VỤ</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/favs.png" /> TIN KHUYẾN MÃI</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/car.png" /> GIAO HÀNG</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+            <div id="menu_right_corner"></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="path"></div>
+        
+        <div id="main">
+
+            <div id="left">
+                <div class="title">Loại sản phẩm</div>
+                <ul class="categories">
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Văn Học</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Kinh Tế</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Tâm Lý</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiếu Nhi</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Giáo Khoa</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ngoại Ngữ</a></li>
+                </ul>
+                <div class="box">
+                    <div class="title">SP Khuyến mãi</div>
+                    <div class="box_content" style="text-align: center;">
+                        <p style="color: red; font-weight: bold; font-size: 12px;">Hỏa Namiya (Tái Bản 2018)</p>
+                        <img src="images/sach_namiya.jpg" width="100" />
+                        <p><span style="color: red; font-weight: bold;">63.000</span> <strike>105.000</strike></p>
+                        <hr>
+                        <p style="color: red; font-weight: bold; font-size: 12px;">Goth - Những Kẻ Hắc Ám</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div class="form-container">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <table class="form-table" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td colspan="2" align="center" style="font-weight: bold; font-size: 14px; padding-bottom: 10px;">ĐĂNG KÝ THÀNH VIÊN</td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="35%">Tên đăng nhập</td>
+                                <td><input type="text" name="username" size="25"></td>
+                            </tr>
+                            <tr>
+                                <td>Mật khẩu</td>
+                                <td><input type="password" name="password" size="30"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2" class="section-title">THÔNG TIN CÁ NHÂN</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Họ tên</td>
+                                <td><input type="text" name="fullname" size="25"></td>
+                            </tr>
+                            <tr>
+                                <td>Ngày sinh</td>
+                                <td><input type="date" name="dob"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top">Giới tính</td>
+                                <td>
+                                    <input type="radio" name="gender" value="Nam" checked> Nam <br>
+                                    <input type="radio" name="gender" value="Nữ"> Nữ
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ email</td>
+                                <td><input type="email" name="email" size="45"></td>
+                            </tr>
+                            <tr>
+                                <td>Hình đại diện</td>
+                                <td><input type="file" name="nmURLAvatar"></td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ</td>
+                                <td><input type="text" name="address" size="25"></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại</td>
+                                <td><input type="tel" name="phone" size="45"></td>
+                            </tr>
+                            <tr>
+                                <td>Câu hỏi bí mật</td>
+                                <td>
+                                    <select name="secret_question">
+                                        <option value="1">Ngôi trường đầu tiên của bạn là gì</option>
+                                        <option value="2">Con vật đầu tiên mà bạn nuôi tên gì</option>
+                                        <option value="3">Kỉ niệm thời thơ ấu của bạn là gì</option>
+                                        <option value="4">Quê bạn ở đâu</option>
+                                        <option value="5">Tên người bạn thân nhất của bạn là gì?</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Trả lời</td>
+                                <td><input type="text" name="answer" size="25"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td valign="top" style="padding-top: 10px;">Bạn đang quan tâm<br>đến nhóm sản phẩm<br>nào?</td>
+                                <td style="padding-top: 10px;">
+                                    <table width="100%" border="0">
+                                        <tr>
+                                            <td><input type="checkbox" name="nmFields[]" value="Văn học"> Văn học</td>
+                                            <td><input type="checkbox" name="nmFields[]" value="Thiếu nhi"> Thiếu nhi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="nmFields[]" value="Kinh tế"> Kinh tế</td>
+                                            <td><input type="checkbox" name="nmFields[]" value="Giáo khoa"> Giáo khoa</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="nmFields[]" value="Tâm lý"> Tâm lý</td>
+                                            <td><input type="checkbox" name="nmFields[]" value="Ngoại ngữ"> Ngoại ngữ</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2" align="center" style="padding-top: 20px;">
+                                    <input type="submit" value="Đăng ký">
+                                    <input type="reset" value="Xóa">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div id="right">
+                <div class="title">Hãng sản xuất</div>
+                <ul class="categories">
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;CHONMUA 365</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Deli</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiên Long</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;KLONG</a></li>
+                    <li class="lmenu1"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Lazy Box</a></li>
+                    <li class="lmenu2"><a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;M&G</a></li>
+                </ul>
+                <div class="box">
+                    <div class="title">Quảng cáo</div>
+                    <div class="box_content" style="text-align: center;">
+                        <img src="images/quang_cao.jpg" width="100%" alt="Quảng cáo" />
+                    </div>
+                </div>
+            </div>
+
+        </div> <div id="footer" style="clear:both; text-align: center; color: #666; font-size: 12px; font-style: italic; padding: 15px 0;">
+            Copyright&copy; Cửa hàng sách tốt ABC<br>
+            Địa chỉ: 180 Cao Lỗ Phường 4 Quận 8 Tp.HCM<br>
+            Điện thoại: 0901234567
+        </div>
+
+    </div>
+</body>
+</html>
