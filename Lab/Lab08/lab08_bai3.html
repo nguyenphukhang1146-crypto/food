@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 08 - Bài 3: JSON User Information</title>
+    <style>
+        /* Định dạng khung bao bên ngoài giống hình mẫu */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 500px;
+            border: 3px solid #000;
+            background-color: #fff;
+            padding: 0;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Tiêu đề chính */
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        /* Khung nội dung trắng bên trong */
+        .info-box {
+            border: 1px solid #ddd;
+            margin: 0 20px 20px 20px;
+            padding: 25px;
+            line-height: 2; /* Khoảng cách giữa các dòng */
+        }
+
+        /* Định dạng các nhãn (Name, Age...) */
+        .label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .value {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Information</h2>
+        
+        <div class="info-box" id="userData">
+            <p>Đang tải dữ liệu...</p>
+        </div>
+    </div>
+
+    <script>
+        // 1. Tạo một đối tượng JSON chứa thông tin người dùng
+        const userJSON = {
+            "name": "Nguyễn Văn A",
+            "age": 30,
+            "email": "nguyenvana@stu.edu.vn",
+            "address": "Ho Chi Minh, NY 10001"
+        };
+
+        // 2. Hàm hiển thị thông tin ra màn hình
+        function displayUserInfo(user) {
+            const displayArea = document.getElementById('userData');
+            
+            // Tạo chuỗi HTML để chèn vào div userData
+            const htmlContent = `
+                <div><span class="label">Name:</span> <span class="value">${user.name}</span></div>
+                <div><span class="label">Age:</span> <span class="value">${user.age}</span></div>
+                <div><span class="label">Email:</span> <span class="value">${user.email}</span></div>
+                <div><span class="label">Address:</span> <span class="value">${user.address}</span></div>
+            `;
+            
+            displayArea.innerHTML = htmlContent;
+        }
+
+        // 3. Gọi hàm hiển thị sau khi trang web tải xong
+        window.onload = function() {
+            displayUserInfo(userJSON);
+        };
+    </script>
+
+</body>
+</html>
